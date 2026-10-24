@@ -1,17 +1,30 @@
-# Unit 3 – Student Management System
+# Unit 3 — Student Management DevOps Project
+**Prepared for:** Vaidehi More
 
-**Student Name:** Vaidehi More
+A Flask student management API with tests and example Docker, Jenkins, and Kubernetes configuration.
 
-## Project Overview
-This project demonstrates DevOps practices using a Student Management System.
+## Run locally
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\Activate.ps1
+# Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
+python run.py
+```
+Open `http://127.0.0.1:5000/`.
 
-## Technologies
-- Python
-- Flask
-- Pytest
-- Docker
-- Jenkins
-- Kubernetes
+## Test
+```bash
+pytest -q
+```
 
-## Project Files
-The source code, testing files, Docker configuration, Jenkins pipeline, and Kubernetes configuration are stored in this folder.
+## Docker
+```bash
+docker build -t student-management:unit3 .
+docker run --rm -p 5000:5000 student-management:unit3
+```
+
+## Kubernetes
+Replace the example image in `k8s/deployment.yaml` with an image pushed to a registry reachable by your cluster, then run `kubectl apply -f k8s/`.
+
+This is a prepared project package, not proof of a live deployment. Run it in your own environment and capture genuine results.
