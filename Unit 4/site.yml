@@ -1,0 +1,25 @@
+---
+- name: Configure Ubuntu web server for Unit 4 lab
+  hosts: web
+  become: true
+  tasks:
+    - name: Refresh APT cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+    - name: Install Nginx and Docker
+      ansible.builtin.apt:
+        name:
+          - ca-certificates
+          - curl
+          - nginx
+          - docker.io
+        state: present
+    - name: Ensure Nginx and Docker are running
+      ansible.builtin.service:
+        name: "{{ item }}"
+        state: started
+        enabled: true
+      loop:
+        - nginx
+        - docker

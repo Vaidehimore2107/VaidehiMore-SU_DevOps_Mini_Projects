@@ -1,0 +1,11 @@
+# Unit 4 checklist — Vaidehi More
+- [ ] AWS CLI, Terraform, Ansible versions verified
+- [ ] AWS identity checked with `aws sts get-caller-identity`
+- [ ] SSH CIDR restricted to current public IP/32
+- [ ] Terraform `fmt`, `validate`, and `plan` completed
+- [ ] Plan reviewed before `apply`
+- [ ] EC2 and security group checked in AWS Console
+- [ ] Ansible connectivity test passed
+- [ ] Ansible playbook completed successfully
+- [ ] Genuine screenshots captured from actual environment
+- [ ] No credentials, private keys, state, or local tfvars committed
