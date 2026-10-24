@@ -1,0 +1,1 @@
+.terraform/\n*.tfstate\n*.tfstate.*\nterraform.tfvars\n*.tfplan\n.aws/\n*.pem\n*.key\nid_rsa\nansible/inventory.ini\n__pycache__/\n*.py[cod]\n.vscode/\n.idea/\n
